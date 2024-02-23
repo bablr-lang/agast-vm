@@ -21,8 +21,8 @@
     "@bablr/weak-stack": "github:bablr-lang/weak-stack#9448f4a9a550900698c072fb39d77307763b5cd8"
   },
   "devDependencies": {
+    "@bablr/agast-vm-strategy-passthrough": "github:bablr-lang/agast-vm-strategy-passthrough#88b5ea2e69e4690b5590cc881e72abe816e436dc",
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#c040bc95f2dddac160628e4757a412016044b3ef",
-    "@bablr/generator-class-trampoline": "github:bablr-lang/generator-class-trampoline#16d03dce8fc9ac3183ec2b3304822c3d8648b699",
     "enhanced-resolve": "^5.12.0",
     "eslint": "^8.32.0",
     "eslint-import-resolver-enhanced-resolve": "^1.0.5",

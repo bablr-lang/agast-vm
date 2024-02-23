@@ -1,6 +1,6 @@
 import { expect } from 'expect';
 import { evaluateSync, Context } from '@bablr/agast-vm';
-import { createPassthroughStrategy } from '@bablr/generator-class-trampoline/passthrough';
+import { createPassthroughStrategy } from '@bablr/agast-vm-strategy-passthrough';
 import {
   buildFragmentOpenTag,
   buildNodeOpenTag,
