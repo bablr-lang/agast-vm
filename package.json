@@ -15,8 +15,8 @@
     "test": "node ./test/runner.js"
   },
   "dependencies": {
-    "@bablr/agast-helpers": "github:bablr-lang/agast-helpers#bcde8202460027c099860756c520e9ec8a59d63b",
-    "@bablr/agast-vm-helpers": "github:bablr-lang/agast-vm-helpers#c2257db07561a10edf337e5ee59251ed6fde74d3",
+    "@bablr/agast-helpers": "github:bablr-lang/agast-helpers#f8e1731a82f58c6c5a66b89cb388b9772f53da6a",
+    "@bablr/agast-vm-helpers": "github:bablr-lang/agast-vm-helpers#9cad7ec120b60a07247a7332f8a00cc156f022f5",
     "@bablr/coroutine": "github:bablr-lang/coroutine#2342d82713731288034df588f11f540d1b76603d",
     "@bablr/weak-stack": "github:bablr-lang/weak-stack#9448f4a9a550900698c072fb39d77307763b5cd8"
   },

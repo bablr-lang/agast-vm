@@ -2,6 +2,7 @@ import { expect } from 'expect';
 import { evaluateSync, Context } from '@bablr/agast-vm';
 import { createPassthroughStrategy } from '@bablr/agast-vm-strategy-passthrough';
 import { enhanceStrategyWithDebugLogging } from '@bablr/strategy_enhancer-debug-log';
+
 import {
   buildFragmentOpenTag,
   buildNodeOpenTag,
@@ -9,7 +10,7 @@ import {
   buildFragmentCloseTag,
   buildReference,
   buildLiteral,
-} from '@bablr/agast-helpers/builders';
+} from '@bablr/agast-vm-helpers/builders';
 
 export const runTest = (testCase) => {
   const resultTokens = [
