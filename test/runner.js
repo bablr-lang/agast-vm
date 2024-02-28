@@ -1,3 +1,5 @@
+/* global console */
+
 import { expect } from 'expect';
 import { evaluateSync, Context } from '@bablr/agast-vm';
 import { createPassthroughStrategy } from '@bablr/agast-vm-strategy-passthrough';
@@ -7,6 +9,7 @@ import * as builders from '@bablr/agast-helpers/builders';
 import * as sourceBuilders from '@bablr/agast-vm-helpers/builders';
 
 export const runTest = (testCase) => {
+  console.log();
   const resultTokens = [
     ...evaluateSync(
       Context.create(),
