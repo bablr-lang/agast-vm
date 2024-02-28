@@ -69,7 +69,7 @@ runTest({
     b.buildFragmentOpenTag(),
     b.buildFragmentOpenTag({ trivia: true }),
     b.buildReference('children', true),
-    b.buildNodeOpenTag('Blank'),
+    b.buildNodeOpenTag({}, 'Blank'),
     b.buildLiteral(' '),
     b.buildNodeCloseTag(),
     b.buildFragmentCloseTag(),
