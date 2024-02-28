@@ -37,7 +37,7 @@ expect(() => {
     tokens: (b) => [
       b.buildFragmentOpenTag(),
       b.buildNodeOpenTag({}, 'Node'),
-      b.buildNodeCloseTag(),
+      b.buildNodeCloseTag('Node'),
       b.buildFragmentCloseTag(),
     ],
   });

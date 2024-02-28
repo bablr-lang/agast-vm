@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@bablr/agast-helpers':
-    specifier: github:bablr-lang/agast-helpers#658ca22e9e604349c5121d9326899235339bbec3
-    version: github.com/bablr-lang/agast-helpers/658ca22e9e604349c5121d9326899235339bbec3
+    specifier: github:bablr-lang/agast-helpers#759adf3275bdcd85dbc4a96187bd50413176bda7
+    version: github.com/bablr-lang/agast-helpers/759adf3275bdcd85dbc4a96187bd50413176bda7
   '@bablr/agast-vm-helpers':
-    specifier: github:bablr-lang/agast-vm-helpers#9cad7ec120b60a07247a7332f8a00cc156f022f5
-    version: github.com/bablr-lang/agast-vm-helpers/9cad7ec120b60a07247a7332f8a00cc156f022f5
+    specifier: github:bablr-lang/agast-vm-helpers#3e1de827c132c4a3dffb805e4b57c3d5e7198dd1
+    version: github.com/bablr-lang/agast-vm-helpers/3e1de827c132c4a3dffb805e4b57c3d5e7198dd1
   '@bablr/coroutine':
     specifier: github:bablr-lang/coroutine#2342d82713731288034df588f11f540d1b76603d
     version: github.com/bablr-lang/coroutine/2342d82713731288034df588f11f540d1b76603d
@@ -2153,9 +2153,10 @@ packages:
     version: 0.0.0
     dependencies:
       '@iter-tools/imm-stack': 1.1.0
+    dev: true
 
-  github.com/bablr-lang/agast-helpers/658ca22e9e604349c5121d9326899235339bbec3:
-    resolution: {tarball: https://codeload.github.com/bablr-lang/agast-helpers/tar.gz/658ca22e9e604349c5121d9326899235339bbec3}
+  github.com/bablr-lang/agast-helpers/759adf3275bdcd85dbc4a96187bd50413176bda7:
+    resolution: {tarball: https://codeload.github.com/bablr-lang/agast-helpers/tar.gz/759adf3275bdcd85dbc4a96187bd50413176bda7}
     name: '@bablr/agast-helpers'
     version: 0.0.0
     dependencies:
@@ -2170,6 +2171,15 @@ packages:
       '@iter-tools/imm-stack': 1.1.0
     dev: true
 
+  github.com/bablr-lang/agast-vm-helpers/3e1de827c132c4a3dffb805e4b57c3d5e7198dd1:
+    resolution: {tarball: https://codeload.github.com/bablr-lang/agast-vm-helpers/tar.gz/3e1de827c132c4a3dffb805e4b57c3d5e7198dd1}
+    name: '@bablr/agast-vm-helpers'
+    version: 0.0.0
+    dependencies:
+      '@bablr/agast-helpers': github.com/bablr-lang/agast-helpers/759adf3275bdcd85dbc4a96187bd50413176bda7
+      '@bablr/coroutine': github.com/bablr-lang/coroutine/2342d82713731288034df588f11f540d1b76603d
+    dev: false
+
   github.com/bablr-lang/agast-vm-helpers/4f5f317fcad02fc87d0ea1b4a0fe0bb7e90a69d0:
     resolution: {tarball: https://codeload.github.com/bablr-lang/agast-vm-helpers/tar.gz/4f5f317fcad02fc87d0ea1b4a0fe0bb7e90a69d0}
     name: '@bablr/agast-vm-helpers'
@@ -2178,15 +2188,6 @@ packages:
       '@bablr/agast-helpers': github.com/bablr-lang/agast-helpers/298f42760021ba2b021cda90508e8e162b116470
       '@bablr/coroutine': github.com/bablr-lang/coroutine/2342d82713731288034df588f11f540d1b76603d
     dev: true
-
-  github.com/bablr-lang/agast-vm-helpers/9cad7ec120b60a07247a7332f8a00cc156f022f5:
-    resolution: {tarball: https://codeload.github.com/bablr-lang/agast-vm-helpers/tar.gz/9cad7ec120b60a07247a7332f8a00cc156f022f5}
-    name: '@bablr/agast-vm-helpers'
-    version: 0.0.0
-    dependencies:
-      '@bablr/agast-helpers': github.com/bablr-lang/agast-helpers/298f42760021ba2b021cda90508e8e162b116470
-      '@bablr/coroutine': github.com/bablr-lang/coroutine/2342d82713731288034df588f11f540d1b76603d
-    dev: false
 
   github.com/bablr-lang/agast-vm-strategy-passthrough/bda4d9d53d44d86e30ff5d54163f56fefe33af3f:
     resolution: {tarball: https://codeload.github.com/bablr-lang/agast-vm-strategy-passthrough/tar.gz/bda4d9d53d44d86e30ff5d54163f56fefe33af3f}
