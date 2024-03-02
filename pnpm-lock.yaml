@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@bablr/agast-helpers':
-    specifier: github:bablr-lang/agast-helpers#10882bf02f073d56c86cfc728c357e6394c698e1
-    version: github.com/bablr-lang/agast-helpers/10882bf02f073d56c86cfc728c357e6394c698e1
+    specifier: github:bablr-lang/agast-helpers#e732cea1996b11862832d1c7b211374725fd677e
+    version: github.com/bablr-lang/agast-helpers/e732cea1996b11862832d1c7b211374725fd677e
   '@bablr/agast-vm-helpers':
     specifier: github:bablr-lang/agast-vm-helpers#edc0ddc2fcd42b5a475db76c8fcd40230ed03d44
     version: github.com/bablr-lang/agast-vm-helpers/edc0ddc2fcd42b5a475db76c8fcd40230ed03d44
@@ -2147,14 +2147,6 @@ packages:
       iter-tools-es: 7.5.3
     dev: true
 
-  github.com/bablr-lang/agast-helpers/10882bf02f073d56c86cfc728c357e6394c698e1:
-    resolution: {tarball: https://codeload.github.com/bablr-lang/agast-helpers/tar.gz/10882bf02f073d56c86cfc728c357e6394c698e1}
-    name: '@bablr/agast-helpers'
-    version: 0.0.0
-    dependencies:
-      '@iter-tools/imm-stack': 1.1.0
-    dev: false
-
   github.com/bablr-lang/agast-helpers/298f42760021ba2b021cda90508e8e162b116470:
     resolution: {tarball: https://codeload.github.com/bablr-lang/agast-helpers/tar.gz/298f42760021ba2b021cda90508e8e162b116470}
     name: '@bablr/agast-helpers'
@@ -2173,6 +2165,14 @@ packages:
 
   github.com/bablr-lang/agast-helpers/aeed717b3fb5bc520f2641e546dac2c94a157db2:
     resolution: {tarball: https://codeload.github.com/bablr-lang/agast-helpers/tar.gz/aeed717b3fb5bc520f2641e546dac2c94a157db2}
+    name: '@bablr/agast-helpers'
+    version: 0.0.0
+    dependencies:
+      '@iter-tools/imm-stack': 1.1.0
+    dev: false
+
+  github.com/bablr-lang/agast-helpers/e732cea1996b11862832d1c7b211374725fd677e:
+    resolution: {tarball: https://codeload.github.com/bablr-lang/agast-helpers/tar.gz/e732cea1996b11862832d1c7b211374725fd677e}
     name: '@bablr/agast-helpers'
     version: 0.0.0
     dependencies:

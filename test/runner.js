@@ -35,35 +35,6 @@ runTest({
   ],
 });
 
-expect(() => {
-  runTest({
-    tokens: (b) => [
-      b.buildFragmentOpenTag(),
-      b.buildNodeOpenTag({}, 'Node'),
-      b.buildNodeCloseTag('Node'),
-      b.buildFragmentCloseTag(),
-    ],
-  });
-}).toThrow();
-
-// expect(() => {
-runTest({
-  tokens: (b) => [b.buildFragmentOpenTag({ trivia: true }), b.buildFragmentCloseTag()],
-});
-// }).toThrow();
-
-expect(() => {
-  runTest({
-    tokens: (b) => [
-      b.buildFragmentOpenTag(),
-      // not matching anything: should fail
-      b.buildFragmentOpenTag({ trivia: true }),
-      b.buildFragmentCloseTag(),
-      b.buildFragmentCloseTag(),
-    ],
-  });
-}).toThrow();
-
 runTest({
   tokens: (b) => [
     b.buildFragmentOpenTag(),
@@ -98,6 +69,7 @@ runTest({
 runTest({
   tokens: (b) => [
     b.buildFragmentOpenTag(),
+    b.buildReference('root', false),
     b.buildNodeOpenTag({ intrinsic: true }, 'Keyword'),
     b.buildLiteral('true'),
     b.buildNodeCloseTag(),
@@ -109,6 +81,47 @@ expect(() => {
   runTest({
     tokens: (b) => [
       b.buildFragmentOpenTag(),
+      b.buildNodeOpenTag({}, 'Node'),
+      b.buildNodeCloseTag('Node'),
+      b.buildFragmentCloseTag(),
+    ],
+  });
+}).toThrow();
+
+expect(() => {
+  runTest({
+    tokens: (b) => [b.buildFragmentOpenTag({ trivia: true }), b.buildFragmentCloseTag()],
+  });
+}).toThrow();
+
+expect(() => {
+  runTest({
+    tokens: (b) => [
+      b.buildFragmentOpenTag(),
+      b.buildFragmentOpenTag(),
+      b.buildFragmentCloseTag(),
+      b.buildFragmentCloseTag(),
+    ],
+  });
+}).toThrow();
+
+expect(() => {
+  runTest({
+    tokens: (b) => [
+      b.buildFragmentOpenTag(),
+      // not matching anything: should fail?
+      b.buildFragmentOpenTag({ trivia: true }),
+      b.buildFragmentCloseTag(),
+      b.buildFragmentCloseTag(),
+    ],
+  });
+}).toThrow();
+
+expect(() => {
+  runTest({
+    tokens: (b) => [
+      b.buildFragmentOpenTag(),
+      b.buildReference('root', false),
       b.buildNodeOpenTag({ intrinsic: true }, 'Node'),
       b.buildNodeCloseTag(),
       b.buildFragmentCloseTag(),
@@ -120,6 +133,7 @@ expect(() => {
   runTest({
     tokens: (b) => [
       b.buildFragmentOpenTag(),
+      b.buildReference('root', false),
       b.buildNodeOpenTag({ intrinsic: true }, 'Node'),
       b.buildLiteral('='),
       b.buildLiteral('>'),
