@@ -1,11 +1,70 @@
 # @bablr/agast-vm
 
-The agAST VM provides powerful abstractions that enable performing many kinds of operations on agAST trees while maintaining guarantees about their basic validity
+The agAST VM provides consistency guarantees when with CSTML documents to parse or transform code. It has no language-specific functionality of any kind. Instead it acts as a streaming traversal engine for CSTML.
 
-## Why a VM?
+## API
 
-VMs are an incredibly powerful pattern for abstraction. Modern websites rely on being able to run Javascript code in a well-defined VM. A VM can have many implementations (there are many web browsers) and it can be used to many purposes, including those not explicitly foreseen by the VM's authors. VMs will always be vulnerable to bad programs, including those that cause infinite loops and other disruptions, but in return for assuming some risks VMs which achieve political success create whole massive ecosystems of content, code, ideas, and even other ecosystems flourishing within them. The idea of BABLR is to learn from the internet in both political and technical ways and create a new universal way of "doing math" about programs that can simplify many kinds of common programming tasks, and otherwise align incentives towards the creation of a new ecosystem.
+The VM responds to several instructions, but its primary API is `advance(token)`, where `token` may be a `StartFragmentTag`, `EndFragmentTag`, `StartNodeTag`, `EndNodeTag`, `Literal`, `Reference`, or `Gap`.
 
-## Features
+The VM requires the basic invariants of CSTML to be followed, for example that `Reference` must be followed by either a `StartNodeTag` or a `Gap`. In fact, `agast-vm` is the reference implementation of these invariants.
 
-The VM is a kind of state machine known formally as as "pushdown automaton", and is intended to be sufficiently powerful to recognize the syntax and structure of any programming language.
+The VM supports `branch()`, `accept()`, and `reject()` instructions, which allow a series of instructions to have their effects applied or discarded together in a kind of transaction.
+
+Finally the VM supports `bindAttribute(key, value)`. A node's attributes start unbound, and this command is used to give them values. Once all declared attributes for a node are bound, that node's full start tag is known and can be emitted.
+
+Here are the basic types used by the VM:
+
+```ts
+type Token = StartFragmentTag | EndFragmentTag | StartNodeTag | EndNodeTag | Literal | Reference | Gap;
+
+type StartFragmentTag {
+  type: 'StartFragmentTag',
+  value: {
+    flags: {
+      trivia: boolean
+    },
+    language: string,
+  }
+}
+
+type EndFragmentTag {
+  type: 'EndFragmentTag',
+  value: null
+}
+
+type StartNodeTag {
+  type: 'StartNodeTag',
+  value: {
+    flags: {
+      syntactic: boolean,
+      trivia: boolean,
+      escape: boolean
+    },
+    language: string,
+    type: string,
+    attributes: { [key: string]: boolean | number | string }
+  }
+}
+
+type EndNodeTag {
+  type: 'EndNodeTag',
+  value: null
+}
+
+type Literal {
+  value: string
+}
+
+type Reference {
+  type: 'Reference',
+  value: {
+    pathName: string,
+    pathIsArray: boolean
+  }
+}
+
+type Gap {
+  type: 'Gap',
+  value: null,
+}
+```
