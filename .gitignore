@@ -1,6 +1,4 @@
 node_modules
-play/fixtures/play
-.vscode
 yarn.lock
 pnpm-lock.yaml
 package-lock.json
