@@ -44,7 +44,7 @@ type StartNodeTag {
   type: 'StartNodeTag',
   value: {
     flags: {
-      syntactic: boolean,
+      token: boolean,
       trivia: boolean,
       escape: boolean
     },
