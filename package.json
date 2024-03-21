@@ -21,7 +21,7 @@
     "@bablr/weak-stack": "github:bablr-lang/weak-stack#b153132f150f3927f75af0645614c986c7610ab9"
   },
   "devDependencies": {
-    "@bablr/agast-vm-strategy-passthrough": "github:bablr-lang/agast-vm-strategy-passthrough#6829c3786ca1b53f244527868cecaf93b4c6feba",
+    "@bablr/agast-vm-strategy-passthrough": "github:bablr-lang/agast-vm-strategy-passthrough#2bd3a0c7311037af92c5b81941c79161499f6c9e",
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#c040bc95f2dddac160628e4757a412016044b3ef",
     "@bablr/strategy_enhancer-debug-log": "github:bablr-lang/strategy_enhancer-debug-log#b096c50200a6bc7a6ff0de1ac37b4ffd6a68f671",
     "enhanced-resolve": "^5.12.0",
