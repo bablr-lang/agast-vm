@@ -23,7 +23,7 @@
   "devDependencies": {
     "@bablr/agast-vm-strategy-passthrough": "github:bablr-lang/agast-vm-strategy-passthrough#2bd3a0c7311037af92c5b81941c79161499f6c9e",
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#49f5952efed27f94ee9b94340eb1563c440bf64e",
-    "@bablr/strategy_enhancer-debug-log": "github:bablr-lang/strategy_enhancer-debug-log#26812a5201c177776bc2449297794b595246e789",
+    "@bablr/strategy_enhancer-debug-log": "github:bablr-lang/strategy_enhancer-debug-log#28a8566e3f446dc995a95ac03c4a3608d76e6b60",
     "enhanced-resolve": "^5.12.0",
     "eslint": "^8.32.0",
     "eslint-import-resolver-enhanced-resolve": "^1.0.5",
