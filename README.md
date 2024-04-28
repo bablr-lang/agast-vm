@@ -66,8 +66,8 @@ type Literal {
 type Reference {
   type: 'Reference',
   value: {
-    pathName: string,
-    pathIsArray: boolean
+    name: string,
+    isArray: boolean
   }
 }
 
