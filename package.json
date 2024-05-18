@@ -17,7 +17,7 @@
   "dependencies": {
     "@bablr/agast-helpers": "github:bablr-lang/agast-helpers#a67379e95262434df57c2e41a919ed76d58a9d93",
     "@bablr/agast-vm-helpers": "github:bablr-lang/agast-vm-helpers#f5e73888656c091c5a9fd1963146ac3bf3426628",
-    "@bablr/coroutine": "github:bablr-lang/coroutine#2342d82713731288034df588f11f540d1b76603d",
+    "@bablr/coroutine": "github:bablr-lang/coroutine#071b090d0ab7c47cc99a8d064d7b5a12d26bb16f",
     "@bablr/weak-stack": "github:bablr-lang/weak-stack#b153132f150f3927f75af0645614c986c7610ab9"
   },
   "devDependencies": {
