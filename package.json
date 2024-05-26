@@ -15,15 +15,15 @@
     "test": "node ./test/runner.js"
   },
   "dependencies": {
-    "@bablr/agast-helpers": "github:bablr-lang/agast-helpers#a67379e95262434df57c2e41a919ed76d58a9d93",
-    "@bablr/agast-vm-helpers": "github:bablr-lang/agast-vm-helpers#e66397a2395a8666e73eb3dab00275b2d899f2bc",
-    "@bablr/coroutine": "github:bablr-lang/coroutine#071b090d0ab7c47cc99a8d064d7b5a12d26bb16f",
-    "@bablr/weak-stack": "github:bablr-lang/weak-stack#b153132f150f3927f75af0645614c986c7610ab9"
+    "@bablr/agast-helpers": "0.1.0",
+    "@bablr/agast-vm-helpers": "0.1.0",
+    "@bablr/coroutine": "0.1.0",
+    "@bablr/weak-stack": "0.1.0"
   },
   "devDependencies": {
     "@bablr/agast-vm-strategy-passthrough": "github:bablr-lang/agast-vm-strategy-passthrough#2bd3a0c7311037af92c5b81941c79161499f6c9e",
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#49f5952efed27f94ee9b94340eb1563c440bf64e",
-    "@bablr/strategy_enhancer-debug-log": "github:bablr-lang/strategy_enhancer-debug-log#f3dce924aee48f5b3a4fa0415759399dfd030eb7",
+    "@bablr/strategy_enhancer-debug-log": "0.1.0",
     "enhanced-resolve": "^5.12.0",
     "eslint": "^8.32.0",
     "eslint-import-resolver-enhanced-resolve": "^1.0.5",
