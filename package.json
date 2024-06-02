@@ -15,15 +15,15 @@
     "test": "node ./test/runner.js"
   },
   "dependencies": {
-    "@bablr/agast-helpers": "0.1.0",
-    "@bablr/agast-vm-helpers": "0.1.0",
+    "@bablr/agast-helpers": "0.1.1",
+    "@bablr/agast-vm-helpers": "0.1.1",
     "@bablr/coroutine": "0.1.0",
     "@bablr/weak-stack": "0.1.0"
   },
   "devDependencies": {
     "@bablr/agast-vm-strategy-passthrough": "github:bablr-lang/agast-vm-strategy-passthrough#2bd3a0c7311037af92c5b81941c79161499f6c9e",
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#49f5952efed27f94ee9b94340eb1563c440bf64e",
-    "@bablr/strategy_enhancer-debug-log": "0.1.0",
+    "@bablr/strategy_enhancer-debug-log": "0.1.1",
     "enhanced-resolve": "^5.12.0",
     "eslint": "^8.32.0",
     "eslint-import-resolver-enhanced-resolve": "^1.0.5",
