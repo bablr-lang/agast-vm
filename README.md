@@ -4,7 +4,7 @@ The agAST VM provides consistency guarantees when with CSTML documents to parse 
 
 ## API
 
-The VM responds to several instructions, but its primary API is `advance(token)`, where `token` may be a `OpenFragmentTag`, `CloseFragmentTag`, `OpenNodeTag`, `CloseNodeTag`, `Literal`, `Reference`, or `Gap`.
+The VM responds to several instructions, but its primary API is `advance(token)`, where `token` may be a `OpenNodeTag`, `CloseNodeTag`, `Literal`, `Reference`, or `Gap`.
 
 The VM requires the basic invariants of CSTML to be followed, for example that `Reference` must be followed by either a `OpenNodeTag` or a `Gap`. In fact, `agast-vm` is the reference implementation of these invariants.
 
@@ -15,17 +15,7 @@ Finally the VM supports `bindAttribute(key, value)`. A node's attributes start u
 Here are the basic types used by the VM:
 
 ```ts
-type Token = OpenFragmentTag | CloseFragmentTag | OpenNodeTag | CloseNodeTag | Literal | Reference | Gap;
-
-type OpenFragmentTag {
-  type: 'OpenFragmentTag',
-  value: null
-}
-
-type CloseFragmentTag {
-  type: 'CloseFragmentTag',
-  value: null
-}
+type Token = OpenNodeTag | CloseNodeTag | Literal | Reference | Gap;
 
 type OpenNodeTag {
   type: 'OpenNodeTag',
@@ -35,8 +25,8 @@ type OpenNodeTag {
       trivia: boolean,
       escape: boolean
     },
-    language: string,
-    type: string,
+    language: string | null,
+    type: string | null, // null type indicates a fragment
     attributes: { [key: string]: boolean | number | string }
   }
 }
