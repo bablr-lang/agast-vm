@@ -12,10 +12,11 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@bablr/agast-helpers": "0.2.0",
-    "@bablr/agast-vm-helpers": "0.2.0",
+    "@bablr/agast-helpers": "0.3.0",
+    "@bablr/agast-vm-helpers": "0.3.0",
     "@bablr/coroutine": "0.1.0",
-    "@bablr/weak-stack": "0.1.0"
+    "@bablr/weak-stack": "0.1.0",
+    "@iter-tools/imm-stack": "1.1.0"
   },
   "devDependencies": {
     "@bablr/agast-vm-strategy-passthrough": "github:bablr-lang/agast-vm-strategy-passthrough#2bd3a0c7311037af92c5b81941c79161499f6c9e",
