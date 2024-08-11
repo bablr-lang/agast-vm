@@ -1,7 +1,7 @@
 {
   "name": "@bablr/agast-vm",
   "description": "A VM providing DOM-like guarantees about agAST trees",
-  "version": "0.0.0",
+  "version": "0.4.2",
   "author": "Conrad Buck<conartist6@gmail.com>",
   "type": "module",
   "files": [
