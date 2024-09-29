@@ -19,7 +19,6 @@
     "@iter-tools/imm-stack": "1.1.0"
   },
   "devDependencies": {
-    "@bablr/agast-vm-strategy-passthrough": "github:bablr-lang/agast-vm-strategy-passthrough#2bd3a0c7311037af92c5b81941c79161499f6c9e",
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#49f5952efed27f94ee9b94340eb1563c440bf64e",
     "enhanced-resolve": "^5.12.0",
     "eslint": "^8.32.0",
