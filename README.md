@@ -1,58 +1,28 @@
 # @bablr/agast-vm
 
-The agAST VM provides consistency guarantees when with CSTML documents to parse or transform code. It has no language-specific functionality of any kind. Instead it acts as a streaming traversal engine for CSTML.
+The agAST VM's purpose is to define what is valid agAST. For complete documentation, see the [agast-vm API reference](https://docs.bablr.org/reference/agast-vm).
 
-## API
+## Usage
 
-The VM responds to several instructions, but its primary API is `advance(token)`, where `token` may be a `OpenNodeTag`, `CloseNodeTag`, `Literal`, `Reference`, or `Gap`.
+```js
+import { agast } from '@bablr/agast-vm';
+import * as b from '@bablr/agast-helpers/builders';
 
-The VM requires the basic invariants of CSTML to be followed, for example that `Reference` must be followed by either a `OpenNodeTag` or a `Gap`. In fact, `agast-vm` is the reference implementation of these invariants.
+let vm = agast();
+let lang = 'https://example';
+let step;
 
-The VM supports `branch()`, `accept()`, and `reject()` instructions, which allow a series of instructions to have their effects applied or discarded together in a kind of transaction.
+let openTag = b.buildOpenNodeTag(
+  b.tokenFlags,
+  lang,
+  'Token',
+);
+let closeTag = b.buildLiteralTag('OK');
+let closeTag = b.buildCloseNodeTag();
 
-Finally the VM supports `bindAttribute(key, value)`. A node's attributes start unbound, and this command is used to give them values. Once all declared attributes for a node are bound, that node's full start tag is known and can be emitted.
+step = vm.next(openTag);
+step = vm.next(literalTag);
+step = vm.next(closeTag);
 
-Here are the basic types used by the VM:
-
-```ts
-type Token = OpenNodeTag | CloseNodeTag | Literal | Reference | Gap;
-
-type OpenNodeTag {
-  type: 'OpenNodeTag',
-  value: {
-    flags: {
-      token: boolean,
-      trivia: boolean,
-      escape: boolean
-    },
-    language: string | null,
-    type: string | null, // null type indicates a fragment
-    attributes: { [key: string]: boolean | number | string }
-  }
-}
-
-type CloseNodeTag {
-  type: 'CloseNodeTag',
-  value: {
-    language: string,
-    type: string,
-  }
-}
-
-type Literal {
-  value: string
-}
-
-type Reference {
-  type: 'Reference',
-  value: {
-    name: string,
-    isArray: boolean
-  }
-}
-
-type Gap {
-  type: 'Gap',
-  value: null,
-}
+let node = step.value;
 ```
