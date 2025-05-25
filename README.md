@@ -9,14 +9,9 @@ import { agast } from '@bablr/agast-vm';
 import * as b from '@bablr/agast-helpers/builders';
 
 let vm = agast();
-let lang = 'https://example';
 let step;
 
-let openTag = b.buildOpenNodeTag(
-  b.tokenFlags,
-  lang,
-  'Token',
-);
+let openTag = b.buildOpenNodeTag(b.tokenFlags, 'Token');
 let closeTag = b.buildLiteralTag('OK');
 let closeTag = b.buildCloseNodeTag();
 
