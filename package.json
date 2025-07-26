@@ -12,7 +12,7 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@iter-tools/imm-stack": "1.1.0",
+    "@iter-tools/imm-stack": "1.2.0",
     "@bablr/agast-helpers": "0.8.0",
     "@bablr/agast-vm-helpers": "0.8.0"
   },
