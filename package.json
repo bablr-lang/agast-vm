@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "@iter-tools/imm-stack": "1.2.0",
-    "@bablr/agast-helpers": "0.10.0",
-    "@bablr/agast-vm-helpers": "0.10.0"
+    "@bablr/agast-helpers": "0.10.2",
+    "@bablr/agast-vm-helpers": "0.10.2"
   },
   "devDependencies": {
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#49f5952efed27f94ee9b94340eb1563c440bf64e",
