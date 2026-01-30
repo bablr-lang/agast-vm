@@ -15,7 +15,7 @@
     "test": "mocha test/*.test.js"
   },
   "dependencies": {
-    "@bablr/agast-helpers": "0.10.4",
+    "@bablr/agast-helpers": "0.10.5",
     "@bablr/agast-vm-helpers": "0.10.4"
   },
   "devDependencies": {
