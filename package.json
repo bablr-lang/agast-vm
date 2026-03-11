@@ -19,7 +19,7 @@
     "@bablr/agast-vm-helpers": "0.10.5"
   },
   "devDependencies": {
-    "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#49f5952efed27f94ee9b94340eb1563c440bf64e",
+    "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#23b94fb3bdfdbc3ac7ed9cb58d7979d8f07dce2b",
     "@bablr/boot": "*",
     "enhanced-resolve": "^5.12.0",
     "expect": "30.1.2",
