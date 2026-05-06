@@ -20,7 +20,6 @@
   },
   "devDependencies": {
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#23b94fb3bdfdbc3ac7ed9cb58d7979d8f07dce2b",
-    "@bablr/boot": "*",
     "enhanced-resolve": "^5.12.0",
     "expect": "30.1.2",
     "eslint": "^8.32.0",
