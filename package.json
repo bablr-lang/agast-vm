@@ -15,8 +15,8 @@
     "test": "mocha test/*.test.js"
   },
   "dependencies": {
-    "@bablr/agast-helpers": "0.11.3",
-    "@bablr/agast-vm-helpers": "0.11.3"
+    "@bablr/agast-helpers": "0.11.4",
+    "@bablr/agast-vm-helpers": "0.11.4"
   },
   "devDependencies": {
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#23b94fb3bdfdbc3ac7ed9cb58d7979d8f07dce2b",
